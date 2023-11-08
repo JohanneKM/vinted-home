@@ -12,26 +12,33 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers"
-      );
-      setData(response.data);
-      setIsLoading(false);
+      try {
+        const response = await axios.get(
+          "https://lereacteur-vinted-api.herokuapp.com/offers"
+        );
+        console.log(response.data);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchData();
   }, []);
 
-  return (
-    <>
+  return isLoading ? (
+    <p>Loading...</p>
+  ) : (
+    <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home data={data} />} />
           <Route path="/offers" element={<Offer />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

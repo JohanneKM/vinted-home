@@ -1,0 +1,45 @@
+.container {
+  border: red solid 1px;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.right-header {
+  display: flex;
+  gap: 30px;
+  border: blue solid 1px;
+}
+
+.login-signup {
+  border: green solid 1px;
+  display: flex;
+}
+
+.right-header .login-signup button {
+  font-size: 12px;
+  background-color: white;
+  color: #017580;
+  border: #017580 solid 1px;
+}
+
+.right-header button {
+  background-color: #017580;
+  color: white;
+  font-size: 12px;
+}
+
+.offer-img {
+  width: 194px;
+  height: 290px;
+  object-fit: cover;
+  border: red solid 1px;
+}
+
+.offers {
+  border: blue solid 1px;
+  display: flex;
+  overflow: scroll hidden;
+  gap: 11px;
+}
