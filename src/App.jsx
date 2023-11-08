@@ -43,6 +43,10 @@ function App() {
             element={<Home data={data} handleClickOffer={handleClickOffer} />}
           />
           <Route path="/offers" element={<Offer />} />
+          <Route
+            path="/offer/:id"
+            element={<Offer selectedOffer={selectedOffer} />}
+          />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>
