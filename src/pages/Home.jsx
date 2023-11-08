@@ -18,17 +18,23 @@ const Home = ({ data, handleClickOffer }) => {
       <div className="offers">
         {data.offers.map((elem) => {
           return (
-            <div
-              onClick={() => {
-                handleClickOffer(elem);
-              }}
-              className="offer"
-              key={elem._id}
-            >
-              <img className="offer-img" src={elem.product_image.url} alt="" />
-              <p> {elem.product_price} €</p>
-              <p> {elem.product_name} </p>
-            </div>
+            <Link to={`/offer/${elem._id}`}>
+              <div
+                onClick={() => {
+                  handleClickOffer(elem);
+                }}
+                className="offer"
+                key={elem._id}
+              >
+                <img
+                  className="offer-img"
+                  src={elem.product_image.url}
+                  alt=""
+                />
+                <p> {elem.product_price} €</p>
+                <p> {elem.product_name} </p>
+              </div>
+            </Link>
           );
         })}
       </div>

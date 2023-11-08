@@ -10,10 +10,13 @@ function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [selectedOffer, setSelectedOffer] = useState();
+  const [path, setPath] = useState("/");
 
   const handleClickOffer = (elem) => {
     console.log("Je clique");
     setSelectedOffer(elem._id);
+    setPath(`/offer/${elem._id}`);
+    <Link to="/offer/64ec49f6cf6466c8520047f5"></Link>;
   };
 
   useEffect(() => {
@@ -42,11 +45,7 @@ function App() {
             path="/"
             element={<Home data={data} handleClickOffer={handleClickOffer} />}
           />
-          <Route path="/offers" element={<Offer />} />
-          <Route
-            path="/offer/:id"
-            element={<Offer selectedOffer={selectedOffer} />}
-          />
+          <Route path="/offer/:id" element={<Offer />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>
