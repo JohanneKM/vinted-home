@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
 
-const Home = ({ data }) => {
+const Home = ({ data, handleClickOffer }) => {
   return (
     <div className="home">
       <Header />
@@ -18,7 +18,13 @@ const Home = ({ data }) => {
       <div className="offers">
         {data.offers.map((elem) => {
           return (
-            <div key={elem.product_image.asset_id}>
+            <div
+              onClick={() => {
+                handleClickOffer(elem);
+              }}
+              className="offer"
+              key={elem._id}
+            >
               <img className="offer-img" src={elem.product_image.url} alt="" />
               <p> {elem.product_price} €</p>
               <p> {elem.product_name} </p>

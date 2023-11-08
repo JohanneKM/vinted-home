@@ -1,5 +1,5 @@
 .container {
-  border: red solid 1px;
+  /* border: red solid 1px; */
   margin: 0 auto;
   display: flex;
 
@@ -41,7 +41,7 @@
   width: 194px;
   height: 260px;
   object-fit: cover;
-  border: red solid 1px;
+  /* border: red solid 1px; */
 }
 
 .offers {
@@ -72,4 +72,8 @@ p {
   object-fit: cover;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.offer {
+  border: red solid 1px;
 }

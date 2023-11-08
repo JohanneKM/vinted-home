@@ -9,6 +9,12 @@ import Offer from "./pages/Offer";
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOffer, setSelectedOffer] = useState();
+
+  const handleClickOffer = (elem) => {
+    console.log("Je clique");
+    setSelectedOffer(elem._id);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +38,10 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home data={data} />} />
+          <Route
+            path="/"
+            element={<Home data={data} handleClickOffer={handleClickOffer} />}
+          />
           <Route path="/offers" element={<Offer />} />
 
           <Route path="*" element={<p>All</p>} />
