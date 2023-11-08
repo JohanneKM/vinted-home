@@ -13,10 +13,9 @@ function App() {
   const [path, setPath] = useState("/");
 
   const handleClickOffer = (elem) => {
-    console.log("Je clique");
+    // console.log("Je clique");
     setSelectedOffer(elem._id);
     setPath(`/offer/${elem._id}`);
-    <Link to="/offer/64ec49f6cf6466c8520047f5"></Link>;
   };
 
   useEffect(() => {
@@ -25,7 +24,7 @@ function App() {
         const response = await axios.get(
           "https://lereacteur-vinted-api.herokuapp.com/offers"
         );
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -45,7 +44,7 @@ function App() {
             path="/"
             element={<Home data={data} handleClickOffer={handleClickOffer} />}
           />
-          <Route path="/offer/:id" element={<Offer />} />
+          <Route path="/offer/:id" element={<Offer data={data} />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>

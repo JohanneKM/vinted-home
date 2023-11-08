@@ -18,13 +18,12 @@ const Home = ({ data, handleClickOffer }) => {
       <div className="offers">
         {data.offers.map((elem) => {
           return (
-            <Link to={`/offer/${elem._id}`}>
+            <Link key={elem._id} to={`/offer/${elem._id}`}>
               <div
                 onClick={() => {
                   handleClickOffer(elem);
                 }}
                 className="offer"
-                key={elem._id}
               >
                 <img
                   className="offer-img"
