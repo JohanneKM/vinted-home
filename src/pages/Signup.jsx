@@ -7,9 +7,9 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [data, setData] = useState();
-  console.log(data);
-  console.log(data.token);
+
   Cookies.get("token");
+  //   console.log(data.token);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -29,14 +29,17 @@ const Signup = () => {
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/user/signup",
         {
-          email: "anne@mail.com",
-          username: "Anne",
-          password: "azerty",
+          email: email,
+          username: username,
+          password: password,
           newsletter: true,
         }
       );
+
       console.log(response.data);
       setData(response.data);
+      //   console.log(data.token);
+
       Cookies.set("token", data.token), { expires: 15 };
     } catch (error) {
       console.log(error);
