@@ -38,9 +38,9 @@ const Signup = () => {
 
       console.log(response.data);
       setData(response.data);
-      //   console.log(data.token);
+      console.log(data.token);
 
-      Cookies.set("token", data.token), { expires: 15 };
+      Cookies.set("token", response.data.token), { expires: 15 };
     } catch (error) {
       console.log(error);
     }
