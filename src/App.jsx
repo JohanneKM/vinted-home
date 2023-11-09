@@ -7,6 +7,7 @@ import axios from "axios";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   const [data, setData] = useState();
@@ -48,6 +49,7 @@ function App() {
           />
           <Route path="/offer/:id" element={<Offer data={data} />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>

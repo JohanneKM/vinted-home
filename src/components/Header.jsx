@@ -10,7 +10,9 @@ const Header = () => {
           <Link to="http://localhost:5173/signup">
             <button>S'inscrire</button>
           </Link>
-          <button>Se Connecter</button>
+          <Link to="http://localhost:5173/login">
+            <button>Se Connecter</button>
+          </Link>
         </div>
 
         <button>Vends tes articles</button>
