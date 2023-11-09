@@ -20,6 +20,7 @@ const Offer = ({ data }) => {
         return (
           <div key={elem.index}>
             <p> {elem.MARQUE}</p>
+            <p> {elem.TAILLE}</p>
             <p> {elem.ÉTAT}</p>
             <p> {elem.COULEUR}</p>
             <p> {elem.EMPLACEMENT}</p>

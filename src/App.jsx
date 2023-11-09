@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
+// Pages
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
+import Signup from "./pages/Signup";
 
 function App() {
   const [data, setData] = useState();
@@ -24,7 +26,7 @@ function App() {
         const response = await axios.get(
           "https://lereacteur-vinted-api.herokuapp.com/offers"
         );
-        // console.log(response.data);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -45,6 +47,7 @@ function App() {
             element={<Home data={data} handleClickOffer={handleClickOffer} />}
           />
           <Route path="/offer/:id" element={<Offer data={data} />} />
+          <Route path="/signup" element={<Signup />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>

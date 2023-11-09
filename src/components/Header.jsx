@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div className="container">
@@ -5,7 +7,9 @@ const Header = () => {
 
       <div className="right-header">
         <div className="login-signup">
-          <button>S'inscrire</button>
+          <Link to="http://localhost:5173/signup">
+            <button>S'inscrire</button>
+          </Link>
           <button>Se Connecter</button>
         </div>
 
