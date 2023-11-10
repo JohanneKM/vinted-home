@@ -5,8 +5,6 @@ import Header from "../components/Header";
 const Home = ({ data, handleClickOffer }) => {
   return (
     <div className="home">
-      <Header />
-
       <div className="hero">
         <img src="../src/assets/img/img-hero.jpg" alt="image hero" />
       </div>
