@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

@@ -66,7 +66,7 @@ function App() {
           <Route path="/offer/:id" element={<Offer data={data} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login handleToken={handleToken} />} />
-          <Route path="/publish" element={<Publish />} />
+          <Route path="/publish" element={<Publish token={token} />} />
 
           <Route path="*" element={<p>All</p>} />
         </Routes>

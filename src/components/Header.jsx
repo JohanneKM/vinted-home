@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ token, handleToken }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <img src="../src/assets/img/vinted.png" alt="logo-vinted" />
@@ -26,7 +29,17 @@ const Header = ({ token, handleToken }) => {
           </div>
         )}
 
-        <button>Vends tes articles</button>
+        <button
+          onClick={() => {
+            if (token) {
+              navigate("/publish");
+            } else {
+              navigate("/login");
+            }
+          }}
+        >
+          Vends tes articles
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const Publish = () => {
+const Publish = ({ token }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [brand, setBrand] = useState("");
@@ -13,8 +13,10 @@ const Publish = () => {
   const [picture, setPicture] = useState();
   const [pictureFromCloudinary, setPictureFromCloudinary] = useState();
 
-  const token =
-    "TjyIdQwqRWjWoSeKdkh-4Cs9_ZtP-1bkTMHqjykOowYn0SOgIcPPBCpeaFZz-fes";
+  //   const token =
+  //     "TjyIdQwqRWjWoSeKdkh-4Cs9_ZtP-1bkTMHqjykOowYn0SOgIcPPBCpeaFZz-fes";
+
+  //   const token3 = "qn4vuzg-nCZltq2rro4a4h6zivVI47UTgKOtaORKZkxjXlRfEJ0hfZ7raCKJiplf"
 
   const handleTitle = (event) => {
     setTitle(event.target.value);
