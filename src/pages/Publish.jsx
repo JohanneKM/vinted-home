@@ -89,41 +89,75 @@ const Publish = ({ token }) => {
       <h2>Vends ton article</h2>
       <form onSubmit={handleSubmit}>
         <div>
+          <label for="picture">Ajoute une photo</label>
           <input
             onChange={(event) => {
               setPicture(event.target.files[0]);
             }}
+            id="picture"
             type="file"
           />
+          <label for="title">Titre</label>
           <input
             onChange={handleTitle}
+            id="title"
             type="text"
             placeholder="ex: Chemise Sézane verte"
           />
+          <label for="description">Décris ton article</label>
           <input
             onChange={handleDescription}
+            id="description"
             type="text"
             placeholder="Décris ton article"
           />
         </div>
+        <label for="brand"> Marque </label>
         <div>
-          <input onChange={handleBrand} type="text" placeholder="ex: Zara" />
-          <input onChange={handleSize} type="text" placeholder="ex: L/40/12" />
-          <input onChange={handleColor} type="text" placeholder="ex: Fushia" />
+          <input
+            onChange={handleBrand}
+            id="brand"
+            type="text"
+            placeholder="ex: Zara"
+          />
+          <label for="size">Taille</label>
+          <input
+            onChange={handleSize}
+            id="size"
+            type="text"
+            placeholder="ex: L/40/12"
+          />
+          <label for="color">Couleur</label>
+          <input
+            onChange={handleColor}
+            id="color"
+            type="text"
+            placeholder="ex: Fushia"
+          />
+          <label for="état">État</label>
           <input
             onChange={handleCondition}
+            id="condition"
             type="text"
             placeholder="Neuf avec étiquette"
           />
+          <label for="location">Lieu</label>
           <input
             onChange={handleLocation}
+            id="location"
             type="text"
             placeholder="ex: Paris"
           />
         </div>
 
         <div>
-          <input onChange={handlePrice} type="text" placeholder="0,00 €" />
+          <label for="price">Prix</label>
+          <input
+            onChange={handlePrice}
+            id="price"
+            type="text"
+            placeholder="0,00 €"
+          />
           <input
             type="checkbox"
             placeholder="Je suis intéressé(e) par les échanges."
