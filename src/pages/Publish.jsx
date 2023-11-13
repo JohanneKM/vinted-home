@@ -54,7 +54,7 @@ const Publish = () => {
     try {
       const formData = new FormData();
 
-      //   formData.append("picture", picture);
+      formData.append("picture", picture);
       formData.append("title", title);
       formData.append("description", description);
       formData.append("brand", brand);
@@ -76,7 +76,7 @@ const Publish = () => {
       );
       console.log("Salut");
       console.log(response);
-      //   setPictureFromCloudinary(response.data.secure_url);
+      setPictureFromCloudinary(response.data.secure_url);
     } catch (error) {
       console.log(error);
     }
@@ -87,12 +87,12 @@ const Publish = () => {
       <h2>Vends ton article</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          {/* <input
+          <input
             onChange={(event) => {
               setPicture(event.target.files[0]);
             }}
             type="file"
-          /> */}
+          />
           <input
             onChange={handleTitle}
             type="text"
@@ -129,7 +129,7 @@ const Publish = () => {
         </div>
         <input type="submit" value="Ajouter" />
       </form>
-      {/* {pictureFromCloudinary && <img src={pictureFromCloudinary} alt="jack" />} */}
+      {pictureFromCloudinary && <img src={pictureFromCloudinary} alt="jack" />}
     </div>
   );
 };
