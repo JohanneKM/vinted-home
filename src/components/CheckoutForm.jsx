@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ title, amount }) => {
   const userID = Cookies.get("userID");
   console.log(userID);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,11 +23,14 @@ const CheckoutForm = () => {
       });
 
       const stripeToken = stripeResponse.token.id;
+      console.log(stripeToken);
 
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/payment",
         {
-          stripeToken: stripeToken,
+          token: stripeToken,
+          title: title,
+          amount: amount,
         }
       );
 
