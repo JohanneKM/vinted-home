@@ -10,6 +10,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const location = useLocation();
   const { title, price } = location.state;
+  //   console.log(typeof price);
 
   return (
     <main className="main-payment">
@@ -30,7 +31,7 @@ const Payment = () => {
         <div className="total">
           <div className="total-total">
             <p>Total</p>
-            <p> xx €</p>
+            <p> {(price + 0.4 + 0.8).toFixed(2)} €</p>
           </div>
           <p className="last-step">
             Il ne vous reste plus qu'une étape pour vous offrir {title}. Vous
