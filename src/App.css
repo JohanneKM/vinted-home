@@ -9,25 +9,53 @@
 .right-header {
   display: flex;
   gap: 30px;
-  border: blue solid 1px;
+  /* border: blue solid 1px; */
 }
 
 .login-signup {
-  border: green solid 1px;
+  /* border: green solid 1px; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .right-header .login-signup button {
   font-size: 12px;
   background-color: white;
-  color: #017580;
-  border: #017580 solid 1px;
+  color: #2aaeb7;
+  border: #2aaeb7 solid 1px;
 }
 
 .right-header button {
-  background-color: #017580;
+  background-color: #2aaeb7;
+  border: #2aaeb7 solid 1px;
   color: white;
   font-size: 12px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  /* border: blue solid 1px; */
+  display: flex;
+  width: 1240px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.header-container button {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button-sell-article {
+  display: flex;
+  align-items: center;
 }
 
 .home {
@@ -38,7 +66,7 @@
 }
 
 .offer-img {
-  width: 194px;
+  width: 230px;
   height: 260px;
   object-fit: cover;
   /* border: red solid 1px; */
@@ -49,6 +77,7 @@
   display: flex;
   overflow: scroll hidden;
   gap: 11px;
+  flex-wrap: nowrap;
 }
 
 h1 {
@@ -66,6 +95,11 @@ p {
   margin-bottom: 10px;
 }
 
+.hero {
+  position: relative;
+  /* border: red solid 1px; */
+}
+
 .hero img {
   width: 1200px;
   height: 350px;
@@ -74,6 +108,118 @@ p {
   margin-bottom: 10px;
 }
 
+.hero p {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  background-color: white;
+  height: 150px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 25px;
+  width: 250px;
+  border: lightgray solid 1px;
+}
+
+.hero button {
+  position: absolute;
+  bottom: 130px;
+  left: 60px;
+  background-color: #2aaeb7;
+  border-radius: 5px;
+  border: white solid 1px;
+  height: 30px;
+  color: white;
+}
+
 .offer {
   border: red solid 1px;
+}
+
+.title-and-desc {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+}
+
+.brand-size-location {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+}
+
+.price {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+}
+
+.submit {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+}
+
+.sell-article {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.add-picture {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+}
+
+.publish {
+  background-color: #ecedee;
+  padding: 20px;
+}
+
+.publish form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

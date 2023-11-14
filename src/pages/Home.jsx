@@ -7,6 +7,9 @@ const Home = ({ data, handleClickOffer }) => {
     <div className="home">
       <div className="hero">
         <img src="../src/assets/img/img-hero.jpg" alt="image hero" />
+
+        <p>Prêts à faire du tri dans vos placards ?</p>
+        <button>Commencez à vendre</button>
       </div>
 
       <h1>Je suis sur la page Home</h1>
@@ -23,13 +26,17 @@ const Home = ({ data, handleClickOffer }) => {
                 }}
                 className="offer"
               >
+                {/* <img src={elem.owner.account.avatar.secure_url} alt="avatar" /> */}
+
+                <p>{elem.owner.account.username}</p>
                 <img
                   className="offer-img"
                   src={elem.product_image.url}
                   alt=""
                 />
                 <p> {elem.product_price} €</p>
-                <p> {elem.product_name} </p>
+                <p> {elem.product_details[0].TAILLE} </p>
+                <p> {elem.product_details[0].MARQUE} </p>
               </div>
             </Link>
           );

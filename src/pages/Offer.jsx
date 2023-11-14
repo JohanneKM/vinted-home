@@ -5,11 +5,21 @@ const Offer = ({ data }) => {
   const { id } = useParams();
 
   const offersTab = data.offers;
-  console.log(offersTab);
+  // console.log(offersTab);
 
   let offerInOffers = offersTab.find((elem) => elem._id === id);
+  // console.log(offerInOffers);
+  let offerDetails = offerInOffers.product_details;
+  // console.log(offerDetails);
 
-  console.log(offerInOffers);
+  let tabKeys = [];
+  for (let i = 0; i < offerDetails.length; i++) {
+    tabKeys.push(Object.keys(offerDetails[i]));
+  }
+
+  console.log(tabKeys);
+  // let keys = Object.keys(offerInOffers.product_details);
+  // console.log(keys);
 
   return (
     <main>

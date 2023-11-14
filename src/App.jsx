@@ -32,8 +32,8 @@ function App() {
 
   const handleClickOffer = (elem) => {
     // console.log("Je clique");
-    setSelectedOffer(elem._id);
-    setPath(`/offer/${elem._id}`);
+    // setSelectedOffer(elem._id);
+    // setPath(`/offer/${elem._id}`);
   };
 
   useEffect(() => {

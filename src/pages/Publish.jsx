@@ -85,11 +85,11 @@ const Publish = ({ token }) => {
   };
 
   return (
-    <div>
-      <h2>Vends ton article</h2>
+    <div className="publish">
+      <p className="sell-article">Vends ton article</p>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label for="picture">Ajoute une photo</label>
+        <div className="add-picture">
+          <label htmlFor="picture">Ajoute une photo</label>
           <input
             onChange={(event) => {
               setPicture(event.target.files[0]);
@@ -97,14 +97,17 @@ const Publish = ({ token }) => {
             id="picture"
             type="file"
           />
-          <label for="title">Titre</label>
+        </div>
+
+        <div className="title-and-desc">
+          <label htmlFor="title">Titre</label>
           <input
             onChange={handleTitle}
             id="title"
             type="text"
             placeholder="ex: Chemise Sézane verte"
           />
-          <label for="description">Décris ton article</label>
+          <label htmlFor="description">Décris ton article</label>
           <input
             onChange={handleDescription}
             id="description"
@@ -112,36 +115,37 @@ const Publish = ({ token }) => {
             placeholder="Décris ton article"
           />
         </div>
-        <label for="brand"> Marque </label>
-        <div>
+        <div className="brand-size-location">
+          <label htmlFor="brand"> Marque </label>
+
           <input
             onChange={handleBrand}
             id="brand"
             type="text"
             placeholder="ex: Zara"
           />
-          <label for="size">Taille</label>
+          <label htmlFor="size">Taille</label>
           <input
             onChange={handleSize}
             id="size"
             type="text"
             placeholder="ex: L/40/12"
           />
-          <label for="color">Couleur</label>
+          <label htmlFor="color">Couleur</label>
           <input
             onChange={handleColor}
             id="color"
             type="text"
             placeholder="ex: Fushia"
           />
-          <label for="état">État</label>
+          <label htmlFor="état">État</label>
           <input
             onChange={handleCondition}
             id="condition"
             type="text"
             placeholder="Neuf avec étiquette"
           />
-          <label for="location">Lieu</label>
+          <label htmlFor="location">Lieu</label>
           <input
             onChange={handleLocation}
             id="location"
@@ -150,8 +154,8 @@ const Publish = ({ token }) => {
           />
         </div>
 
-        <div>
-          <label for="price">Prix</label>
+        <div className="price">
+          <label htmlFor="price">Prix</label>
           <input
             onChange={handlePrice}
             id="price"
@@ -163,7 +167,9 @@ const Publish = ({ token }) => {
             placeholder="Je suis intéressé(e) par les échanges."
           />
         </div>
-        <input type="submit" value="Ajouter" />
+        <div className="submit">
+          <input type="submit" value="Ajouter" />
+        </div>
       </form>
       {pictureFromCloudinary && <img src={pictureFromCloudinary} alt="jack" />}
     </div>

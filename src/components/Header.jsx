@@ -5,7 +5,7 @@ const Header = ({ token, handleToken }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="header-container">
       <img src="../src/assets/img/vinted.png" alt="logo-vinted" />
 
       <div className="right-header">
@@ -28,18 +28,19 @@ const Header = ({ token, handleToken }) => {
             </Link>
           </div>
         )}
-
-        <button
-          onClick={() => {
-            if (token) {
-              navigate("/publish");
-            } else {
-              navigate("/login");
-            }
-          }}
-        >
-          Vends tes articles
-        </button>
+        <div className="button-sell-article">
+          <button
+            onClick={() => {
+              if (token) {
+                navigate("/publish");
+              } else {
+                navigate("/login");
+              }
+            }}
+          >
+            Vends tes articles
+          </button>
+        </div>
       </div>
     </div>
   );
