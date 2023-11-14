@@ -42,9 +42,8 @@ const CheckoutForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>Formulaire de paiement</p>
       <CardElement />
-      <input type="submit" value="Acheter" disabled={isLoading} />
+      <input type="submit" value="Payer" disabled={isLoading} />
     </form>
   );
 };

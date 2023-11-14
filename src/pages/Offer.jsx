@@ -41,7 +41,12 @@ const Offer = ({ data, token }) => {
       <button
         onClick={() => {
           if (token) {
-            navigate("/payment");
+            navigate("/payment", {
+              state: {
+                title: offerInOffers.product_name,
+                price: offerInOffers.product_price,
+              },
+            });
           } else {
             navigate("/login");
           }

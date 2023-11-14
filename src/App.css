@@ -223,3 +223,53 @@ p {
   flex-direction: column;
   gap: 10px;
 }
+
+/* ----- PAYMENT PAG ------- */
+
+.main-payment {
+  background-color: #eaedee;
+  padding: 50px;
+}
+
+.payment {
+  border: red solid 1px;
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.payment h2 {
+  color: #a0a0a0;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buyer-protection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-fee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-total p {
+  font-weight: bold;
+}
+
+.total-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.last-step {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
