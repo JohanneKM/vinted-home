@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import Publish from "./pages/Publish";
+import Payment from "./pages/Payment";
 
 function App() {
   const [data, setData] = useState();
@@ -63,11 +64,14 @@ function App() {
             path="/"
             element={<Home data={data} handleClickOffer={handleClickOffer} />}
           />
-          <Route path="/offer/:id" element={<Offer data={data} />} />
+          <Route
+            path="/offer/:id"
+            element={<Offer data={data} token={token} />}
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login handleToken={handleToken} />} />
           <Route path="/publish" element={<Publish token={token} />} />
-
+          <Route path="/payment" element={<Payment />} />
           <Route path="*" element={<p>All</p>} />
         </Routes>
       </Router>

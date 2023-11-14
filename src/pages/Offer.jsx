@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
-const Offer = ({ data }) => {
+const Offer = ({ data, token }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const offersTab = data.offers;
   // console.log(offersTab);
@@ -37,6 +38,17 @@ const Offer = ({ data }) => {
           </div>
         );
       })}
+      <button
+        onClick={() => {
+          if (token) {
+            navigate("/payment");
+          } else {
+            navigate("/login");
+          }
+        }}
+      >
+        Acheter
+      </button>
     </main>
   );
 };
