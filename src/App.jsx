@@ -62,7 +62,13 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home data={data} handleClickOffer={handleClickOffer} />}
+            element={
+              <Home
+                data={data}
+                handleClickOffer={handleClickOffer}
+                token={token}
+              />
+            }
           />
           <Route
             path="/offer/:id"

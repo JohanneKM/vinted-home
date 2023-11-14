@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../components/Header";
 
-const Home = ({ data, handleClickOffer }) => {
+const Home = ({ data, handleClickOffer, token }) => {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <div className="hero">
         <img src="../src/assets/img/img-hero.jpg" alt="image hero" />
 
         <p>Prêts à faire du tri dans vos placards ?</p>
-        <button>Commencez à vendre</button>
+        <button
+          onClick={() => {
+            if (token) {
+              navigate("/publish");
+            } else {
+              navigate("/login");
+            }
+          }}
+        >
+          Commencez à vendre
+        </button>
       </div>
 
-      <h1>Je suis sur la page Home</h1>
-      <Link to="/offers">Cliquez ici pour naviguer vers la page Offers</Link>
       <h2>Articles Populaires</h2>
 
       <div className="offers">

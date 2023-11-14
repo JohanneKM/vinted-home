@@ -24,7 +24,6 @@ const Offer = ({ data, token }) => {
 
   return (
     <main>
-      <h1>Je suis sur la page Offer</h1>
       <Link to="/">Cliquez ici pour naviguer vers la page Home</Link>
       <p> The product id is : {id}</p>
       {offerInOffers.product_details.map((elem, index) => {
