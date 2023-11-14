@@ -61,7 +61,7 @@
 .home {
   width: 1240px;
   margin: 0 auto;
-  border: green solid 1px;
+  /* border: green solid 1px; */
   padding: 20px;
 }
 
@@ -73,11 +73,11 @@
 }
 
 .offers {
-  border: blue solid 1px;
+  /* border: blue solid 1px; */
   display: flex;
-  overflow: scroll hidden;
+  /* overflow: scroll hidden; */
   gap: 11px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -133,7 +133,7 @@ p {
 }
 
 .offer {
-  border: red solid 1px;
+  /* border: red solid 1px; */
 }
 
 .title-and-desc {
