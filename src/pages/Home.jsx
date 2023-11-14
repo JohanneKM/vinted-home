@@ -29,23 +29,31 @@ const Home = ({ data, handleClickOffer, token }) => {
       <div className="offers">
         {data.offers.map((elem) => {
           return (
-            <Link key={elem._id} to={`/offer/${elem._id}`}>
+            <Link
+              style={{ textDecoration: "none" }}
+              key={elem._id}
+              to={`/offer/${elem._id}`}
+            >
               <div
                 onClick={() => {
                   handleClickOffer(elem);
                 }}
                 className="offer"
               >
-                {/* <img src={elem.owner.account.avatar.secure_url} alt="avatar" /> */}
+                <div className="avatar">
+                  {elem.owner.account.avatar && (
+                    <img src={elem.owner.account.avatar.secure_url} alt="" />
+                  )}
 
-                <p>{elem.owner.account.username}</p>
+                  <p className="username">{elem.owner.account.username}</p>
+                </div>
                 <img
                   className="offer-img"
                   src={elem.product_image.url}
                   alt=""
                 />
                 <p> {elem.product_price} €</p>
-                <p> {elem.product_details[0].TAILLE} </p>
+                <p> {elem.product_details[1].TAILLE} </p>
                 <p> {elem.product_details[0].MARQUE} </p>
               </div>
             </Link>
